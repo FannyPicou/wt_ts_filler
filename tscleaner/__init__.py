@@ -1,1 +1,1 @@
-__all__ = ["SpikeCleaner", "FlatPeriodCleaner", "OutOfRangeCleaner", "plot_timeseries"]
+__all__ = ["SpikeCleaner", "FlatPeriodCleaner", "plot_timeseries"]
