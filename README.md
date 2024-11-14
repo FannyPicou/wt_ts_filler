@@ -1,6 +1,6 @@
 # wt_ts_filler
 
-This package aims to fill gaps in water table time series by using other correlated series.
+This package aims to clean water table time series and to fill gaps by using other correlated series.
  
 Three steps :
 1) Delete flats and spikes
