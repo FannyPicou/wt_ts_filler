@@ -9,7 +9,6 @@ class SpikeCleaner:
         print(f"Checking for jumps in {data.name}")
         prev_value = data.iloc[0]
         for t, value in data.items():
-            print(np.isnan(value))
             if isinstance(value, (str)):  # raise exception for invalid input
                 raise ValueError(f"The provided value of {value} is string type.")
             if np.isnan(value) or np.isnan(prev_value):
@@ -21,8 +20,6 @@ class SpikeCleaner:
                 data[t] = value
                 prev_value = value
             else:
-                print(value)
-                print(prev_value)
                 data[t] = np.nan
                 print("Jump detected and value removed on", t, ":", value)
         print(f"Data removed: {data_original[~data_original.isin(data)]}")
