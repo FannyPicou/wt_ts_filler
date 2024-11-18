@@ -7,7 +7,6 @@
     <list default="true" id="2b0651ab-7d5a-4d9c-9812-5b70f783ebb4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tscleaner/cleaning.py" beforeDir="false" afterPath="$PROJECT_DIR$/tscleaner/cleaning.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,13 +133,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scripts/main.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/scripts/main.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="6" />
+          <line>74</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
