@@ -21,10 +21,7 @@ class SpikeCleaner:
                 prev_value = value
             else:
                 data[t] = np.nan
-                print("Jump detected and value removed on", t, ":", value)
-        print(f"Data removed: {data_original[~data_original.isin(data)]}")
         return data
-        # return data.dropna()
 
 class FlatPeriodCleaner:
     def __init__(self, flat_period):
@@ -42,10 +39,8 @@ class FlatPeriodCleaner:
             while data[i+count+1] == data[i+count] :
                 count += 1
             if count >= self.flat_period :
-                print("Removing ", count, "values starting at index:", i)
                 data[i: i + count + 1] = np.nan
                 i = i + 1 + count
             else:
                 i += 1
-        print(f"Data removed: {data_original[~data_original.isin(data)]}")
         return data
