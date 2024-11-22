@@ -12,7 +12,7 @@ class GapsFiller:
         estimated_dataframe = dataframe.copy()
 
         # Step 1 : Interpolate for gaps inf or equal to N days
-        print("Interpolate for gaps inf or equal to " + str(self.max_gap_lin_interp) + ' days')
+        print("Linear interpolation for gaps inf or equal to " + str(self.max_gap_lin_interp) + ' days.')
         estimated_df_interpolated = estimated_dataframe.interpolate()
         for c in estimated_dataframe:
             mask = estimated_dataframe[c].isna()
@@ -21,7 +21,8 @@ class GapsFiller:
         estimated_dataframe = estimated_df_interpolated
 
         # Step 2 : Search the more correlated and apply linear regression + compute epsilon left
-        print("Apply linear regression and compute epsilon left")
+        # print("Apply linear regression and compute epsilon left")
+        print("Estimation of missing data from a data set with a correlation coefficient greater than or equal to " + str(self.Corr_min)+ '.')
         estimated_dataframe_w_lin_reg = estimated_dataframe.copy()
         df_epsilon = estimated_dataframe.copy()
         correlation_df = estimated_dataframe.copy()
@@ -64,7 +65,7 @@ class GapsFiller:
                         estimated_dataframe_w_lin_reg.iloc[j, i] = np.nan
 
         # Step 3 : Compute estimation length and add values where there is a change in selected correlated dataset
-        print("Compute estimation length")
+        # print("Compute estimation length")
         df_predict_lengths = estimated_dataframe.copy()
         for i in range(len(df_predict_lengths.columns)):  # on parcourt les datasets
             # for i in [8]:  # on parcourt les datasets
@@ -98,7 +99,7 @@ class GapsFiller:
                             j = j + 2
 
         # Step 4 : Search the more correlated and apply linear regression + compute epsilon left again
-        print("Apply linear regression and compute epsilon left again")
+        # print("Apply linear regression and compute epsilon left again")
         estimated_dataframe_w_lin_reg = estimated_dataframe.copy()
         df_epsilon = estimated_dataframe.copy()
         correlation_df = estimated_dataframe.copy()
@@ -142,7 +143,7 @@ class GapsFiller:
                         estimated_dataframe_w_lin_reg.iloc[j, i] = np.nan
 
         # Step 3 : Search the more correlated and apply linear regression + compute epsilon right
-        print("Compute epsilon right")
+        # print("Compute epsilon right")
         for i in range(len(dataframe.columns)):  # on parcourt les datasets
             for j in range(len(estimated_dataframe.index) - 2, 1, -1):  # on parcourt les dates à l'envers
                 if ~np.isnan(estimated_dataframe.iloc[j + 1, i]) and np.isnan(
@@ -170,7 +171,7 @@ class GapsFiller:
                         df_epsilon.iloc[j, i] = epsilon
 
         # Step 4 : Apply ponderated epsilon
-        print("Compute interpolation")
+        # print("Compute interpolation")
         for i in range(len(estimated_dataframe.columns)):
             j = 0
             while j < len(df_predict_lengths.index) - 1:  # on parcourt les dates

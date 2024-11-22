@@ -115,15 +115,15 @@ estimated_dataframe.columns = dataframe.columns[1:]
 plot_dataframes(cleaned_dataframe,estimated_dataframe)
 ```
 
-    Interpolate for gaps inf or equal to 5 days
+    Linear interpolation for gaps inf or equal to 5 days.
+    Estimation of missing data from a data set with a correlation coefficient greater than or equal to 0.75.
     
 
-    Apply linear regression and compute epsilon left
-    Compute estimation length
-    Apply linear regression and compute epsilon left again
-    Compute epsilon right
-    Compute interpolation
+
     
+![png](README_files/README_8_1.png)
+    
+
 
 
     
@@ -134,11 +134,5 @@ plot_dataframes(cleaned_dataframe,estimated_dataframe)
 
     
 ![png](README_files/README_8_3.png)
-    
-
-
-
-    
-![png](README_files/README_8_4.png)
     
 

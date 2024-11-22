@@ -3,8 +3,9 @@ from random import *
 
 def plot_timeseries(data_original, data):
     plt.figure(figsize=(15, 5))
-    plt.plot(data_original, ".", color="red")
-    plt.plot(data, ".", color="green")
+    plt.plot(data_original, ".", color="red", label = 'Deleted data')
+    plt.plot(data, ".", color="green", label = 'Retained data')
+    plt.legend()
     plt.title(f"{data.name}")
     plt.ylabel('Groundwater level (mNGF)')
     plt.show()
