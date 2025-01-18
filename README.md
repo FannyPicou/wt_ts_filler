@@ -3,8 +3,11 @@
 ## Purpose
 This python package aims to clean up time series of groundwater levels and fill in missing data using correlated time series from nearby wells. This notebook presents an application example based on groundwater level data measured in the Var alluvial aquifer (France).
 
+## Installation 
+Install the wt_ts_filler package from PyPI using : \
+`python3 -m pip install wt-ts-filler`
 
-## Libraries
+## Importing libraries
 
 ```python
 from wt_ts_filler.Filling_gaps import GapsFiller
