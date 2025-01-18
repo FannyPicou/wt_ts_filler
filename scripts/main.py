@@ -1,6 +1,6 @@
-from tsfiller.Filling_gaps import GapsFiller
-from tsfiller.cleaning import SpikeCleaner, FlatPeriodCleaner
-from tsfiller.plotting import *
+from wt_ts_filler.Filling_gaps import GapsFiller
+from wt_ts_filler.cleaning import SpikeCleaner, FlatPeriodCleaner
+from wt_ts_filler.plotting import *
 
 import pandas as pd
 
