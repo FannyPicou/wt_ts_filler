@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "If you use this package, please cite it as below."
+authors:
+- family-names: Picourlat
+  given-names: Fanny
+orcid: https://orcid.org/0000-0002-5283-8935
+title: "wt_ts_filler"
+version: v0.1.0
+date-released: 2025-01-18
