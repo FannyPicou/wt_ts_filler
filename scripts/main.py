@@ -5,13 +5,14 @@ from tsfiller.plotting import *
 import pandas as pd
 
 # Import dataframe
-dataframe = pd.read_csv('C:/Users/picourlat/Documents/040724_Data_recap/DATA/Hydrologic_data/Groundwater_lvls/Analyse_data_drought/Data/wt_ts.csv')
-dataframe.iloc[:,0] = pd.to_datetime(dataframe.iloc[:,0], format='%Y-%m-%d') # set dates in datetime format
+dataframe = pd.read_csv(
+    'C:/Users/picourlat/Documents/040724_Data_recap/DATA/Hydrologic_data/Groundwater_lvls/Analyse_data_drought/Data/wt_ts.csv')
+dataframe.iloc[:, 0] = pd.to_datetime(dataframe.iloc[:, 0], format='%Y-%m-%d')  # set dates in datetime format
 
 # Split the dataframe into data series
 data_series = []
 for i in range(1, len(dataframe.columns)):
-    data = pd.Series(dataframe.iloc[:,i].values, index=dataframe.iloc[:,0], name="data"+str(i))
+    data = pd.Series(dataframe.iloc[:, i].values, index=dataframe.iloc[:, 0], name="data" + str(i))
     data_series.append(data)
 
 # Clean
@@ -20,7 +21,7 @@ cleaners = [
     FlatPeriodCleaner(flat_period=10)
 ]
 
-for data in data_series :
+for data in data_series:
     data_original = data.copy()
     for cleaner in cleaners:
         data = cleaner.clean(data)
@@ -28,37 +29,9 @@ for data in data_series :
 cleaned_dataframe = pd.concat(data_series, axis=1)
 
 # Fill gaps
-estimated_dataframe = GapsFiller(max_gap_lin_interp=5,Corr_min=0.75).fill(cleaned_dataframe)
+estimated_dataframe = GapsFiller(max_gap_lin_interp=5, Corr_min=0.75).fill(cleaned_dataframe)
 estimated_dataframe.columns = dataframe.columns[1:]
-plot_dataframes(cleaned_dataframe,estimated_dataframe)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+plot_dataframes(cleaned_dataframe, estimated_dataframe)
 
 # from scipy import stats
 # corr_matrix = cleaned_dataframe.corr()

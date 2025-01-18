@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b0651ab-7d5a-4d9c-9812-5b70f783ebb4" name="Changes" comment="" />
+    <list default="true" id="2b0651ab-7d5a-4d9c-9812-5b70f783ebb4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsfiller/Filling_gaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/tsfiller/Filling_gaps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsfiller/cleaning.py" beforeDir="false" afterPath="$PROJECT_DIR$/tsfiller/cleaning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsfiller/plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/tsfiller/plotting.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

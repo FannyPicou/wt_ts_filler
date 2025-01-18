@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class SpikeCleaner:
     def __init__(self, max_jump):
         self.max_jump = max_jump
@@ -23,6 +24,7 @@ class SpikeCleaner:
                 data[t] = np.nan
         return data
 
+
 class FlatPeriodCleaner:
     def __init__(self, flat_period):
         self.flat_period = flat_period
@@ -36,9 +38,9 @@ class FlatPeriodCleaner:
         i = 0
         while i < len(data) - self.flat_period:
             count = 0
-            while data[i+count+1] == data[i+count] :
+            while data[i + count + 1] == data[i + count]:
                 count += 1
-            if count >= self.flat_period :
+            if count >= self.flat_period:
                 data[i: i + count + 1] = np.nan
                 i = i + 1 + count
             else:

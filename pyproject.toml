@@ -10,7 +10,7 @@ dependencies = [
 ]
 
 authors = [
-  { name="Fanny Picourlat", email="fanny.picourlat@gmail.com" },
+    { name = "Fanny Picourlat", email = "fanny.picourlat@gmail.com" },
 ]
 description = "Cleaner and filler of groundwater level time series, using correlated time series from neighboring wells"
 readme = "README.md"
@@ -24,8 +24,8 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest","ruff","black","mkdocs","mkdocstrings[python]", "mkdocs-material"]
-test= ["pytest"]
+dev = ["pytest", "ruff", "black", "mkdocs", "mkdocstrings[python]", "mkdocs-material"]
+test = ["pytest"]
 
 [project.urls]
 "Homepage" = "https://github.com/FannyPicou/wt_ts_filler"
