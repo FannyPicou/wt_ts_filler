@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wt_ts_filler"
+version = "0.1.0"
+dependencies = [
+    "numpy", "matplotlib", "pandas", "scipy"
+]
+
+authors = [
+  { name="Fanny Picourlat", email="fanny.picourlat@gmail.com" },
+]
+description = "Cleaner and filler of groundwater level time series, using correlated time series from neighboring wells"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 2 - Pre-Alpha",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+dev = ["pytest","ruff","black","mkdocs","mkdocstrings[python]", "mkdocs-material"]
+test= ["pytest"]
+
+[project.urls]
+"Homepage" = "https://github.com/FannyPicou/wt_ts_filler"
+"Bug Tracker" = "https://github.com/FannyPicou/wt_ts_filler/issues"

@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-from random import *
 
 def plot_timeseries(data_original, data):
     plt.figure(figsize=(15, 5))
